@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import News from "./News.jsx";
 const GOLD = "#A8832A";
 const NAVY = "#0A0E1A";
 const NAVY_MID = "#111827";
@@ -553,5 +553,5 @@ export default function App(){
     document.body.style.margin="0";document.body.style.background=NAVY;document.body.style.overflowX="hidden";
   },[]);
   const scrollTo=(id)=>{if(id==="home"){window.scrollTo({top:0,behavior:"smooth"});return;}const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth"});};
-  return(<div style={{background:NAVY,minHeight:"100vh"}}><MobileStyles/><Nav onNav={scrollTo} lang={lang} setLang={setLang} t={t}/><Hero onNav={scrollTo} t={t}/><About t={t}/><Founder t={t}/><KazanForum t={t}/><Challenge t={t}/><Modules t={t}/><WorldMap t={t}/><Kazan t={t}/><Partners t={t}/><Roadmap t={t}/><Press t={t}/><Contact t={t}/><Footer onNav={scrollTo} t={t}/></div>);
+  return(<div style={{background:NAVY,minHeight:"100vh"}}><MobileStyles/><Nav onNav={scrollTo} lang={lang} setLang={setLang} t={t}/><Hero onNav={scrollTo} t={t}/><About t={t}/><Founder t={t}/><KazanForum t={t}/><Challenge t={t}/><Modules t={t}/><WorldMap t={t}/><Kazan t={t}/><Partners t={t}/><Roadmap t={t}/><Press t={t}/><Contact t={t}/><News lang={lang}/><Footer onNav={scrollTo} t={t}/></div>);
 }
